@@ -3,9 +3,10 @@
  * Plugin Name: Admin Menu Pending Posts
  */
 
-add_action( 'admin_menu', 'add_pending_bubble' );
-
-function add_pending_bubble() {
+/**
+ * Main Function adding the bubble with the number to the admin menu
+ */
+function add_pending_admin_bubble() {
 	global $menu;
 
 	$custom_post_count = wp_count_posts('post');
@@ -32,3 +33,4 @@ function add_pending_bubble() {
 	}
 
 }
+add_action( 'admin_menu', 'add_pending_admin_bubble' );
