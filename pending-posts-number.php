@@ -30,7 +30,7 @@ function easy_pending_posts_admin_bubble() {
 
 				$menu[$key][0] .= sprintf(
 					'<span class="update-plugins count-%1$s" style="margin-left:10px"><span class="plugin-count">%1$s</span></span>',
-					$pending_post_count				);
+					$pending_post_count );
 
 				return;
 
