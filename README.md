@@ -1,0 +1,2 @@
+#Admin Menu Pending Posts
+A simple plugin that allows you to see a number of how many posts are pending. No options and easy to use. Simply install and watch the pending posts without having to go into the posts page. 

@@ -13,16 +13,16 @@
 /**
  * Main Function adding the bubble with the number to the admin menu
  */
-function add_pending_admin_bubble() {
+function easy_pending_posts_admin_bubble() {
 
 	global $menu;
 
 	$custom_post_count = wp_count_posts('post');
-	$user_count = $custom_post_count->pending;
+	$pending_post_count = $custom_post_count->pending;
 
 
 
-	if ( $user_count ) {
+	if ( $pending_post_count ) {
 
 		foreach ( $menu as $key => $value ) {
 
@@ -30,7 +30,7 @@ function add_pending_admin_bubble() {
 
 				$menu[$key][0] .= sprintf(
 					'<span class="update-plugins count-%1$s" style="margin-left:10px"><span class="plugin-count">%1$s</span></span>',
-					$user_count				);
+					$pending_post_count				);
 
 				return;
 
@@ -41,4 +41,4 @@ function add_pending_admin_bubble() {
 	}
 
 }
-add_action( 'admin_menu', 'add_pending_admin_bubble' );
+add_action( 'admin_menu', 'easy_pending_posts_admin_bubble' );
